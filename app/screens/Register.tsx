@@ -10,6 +10,8 @@ import Input from '../components/Input'
 import Button from '../components/Button'
 import { validateInput } from '../utils/actions/formActions'
 import { reducer } from '../utils/reducers/formReducers'
+import * as Animatable from 'react-native-animatable';
+
 
 const isTestMode = true;
 
@@ -54,7 +56,9 @@ const Register = ({ navigation }) => {
             <Text style={styles.headerTitle}>Register</Text>
             <Text style={styles.subHeaderTitle}>Please Register to create a new Account</Text>
         </View>
-        <View style={styles.footer}>
+        <Animatable.View 
+            animation="fadeInUpBig"
+          style={styles.footer}>
             <KeyboardAwareScrollView>
                 <Text style={styles.inputHeader}>Full Name</Text>
                 <Input
@@ -66,22 +70,34 @@ const Register = ({ navigation }) => {
                 />
                 <Text style={styles.inputHeader}>Email</Text>
                 <Input
+                    id="email"
+                    onInputChanged={inputChangeHandler}
+                    errorText={formState.inputValidities["email"]}
                     placeholder="example@gmail.com"
                     placeholderTextColor={COLORS.black}
                     keyboardType="email-address"
                 />
                 <Text style={styles.inputHeader}>Phone Number</Text>
                 <Input
+                    id="phone"
+                    onInputChanged={inputChangeHandler}
+                    errorText={formState.inputValidities["phone"]}
                     placeholder="080123456789"
                     placeholderTextColor={COLORS.black}
                 />
                 <Text style={styles.inputHeader}>INEC Voter ID</Text>
                 <Input
+                    id="voterid"
+                    onInputChanged={inputChangeHandler}
+                    errorText={formState.inputValidities["voterid"]}
                     placeholder="901H DFK0 9340 3403 9486"
                     placeholderTextColor={COLORS.black}
                 />
                 <Text style={styles.inputHeader}>Password</Text>
                 <Input
+                    id="password"
+                    onInputChanged={inputChangeHandler}
+                    errorText={formState.inputValidities["password"]}
                     placeholder="********"
                     placeholderTextColor={COLORS.black}
                     secureTextEntry={true}
@@ -89,6 +105,9 @@ const Register = ({ navigation }) => {
                 />
                 <Text style={styles.inputHeader}>Confirm Password</Text> 
                 <Input
+                    id="confirmPassword"
+                    onInputChanged={inputChangeHandler}
+                    errorText={formState.inputValidities["confirmPassword"]}
                     placeholder="*********"
                     placeholderTextColor={COLORS.black}
                     secureTextEntry={true}
@@ -101,7 +120,7 @@ const Register = ({ navigation }) => {
                 />
             </KeyboardAwareScrollView>
             
-        </View>
+        </Animatable.View>
       </LinearGradient>
     </SafeAreaView>
   )

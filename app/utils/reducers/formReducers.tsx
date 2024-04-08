@@ -1,5 +1,5 @@
 export const reducer = (state, action) => {
-    const { validationResult, inputId, inputValue } = action
+    const { validationResult, inputId, inputValue } = action;
 
     const updatedValues = {
         ...state.inputValues,
@@ -8,7 +8,7 @@ export const reducer = (state, action) => {
 
     const updatedValidities = {
         ...state.inputValidities,
-        [inputId]: inputValue
+        [inputId]: validationResult
     }
 
     let updatedFormIsValid = true
