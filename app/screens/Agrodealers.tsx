@@ -48,7 +48,7 @@ const Agrodealers = () => {
 
 
       <Image style={styles.img} source={require('../../assets/a.png')} />
-      <Text style={styles.txt}>Agro Dealers Details</Text>
+      <Text style={styles.txt}>Agro Dealer</Text>
 
 
         <TextInput value={fullname} onChangeText={(fullname) => { setFullname(fullname)}} placeholder='Agro Dealers Fullname' style={styles.textBoxes}></TextInput>

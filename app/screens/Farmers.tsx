@@ -72,7 +72,7 @@ const Farmers = () => {
 
 
       <Image style={styles.img} source={require('../../assets/f.png')} />
-      <Text style={styles.txt}>Farmer Personal Details</Text>
+      <Text style={styles.txt}>Farmer</Text>
 
 
         <TextInput value={fullname} onChangeText={(fullname) => { setFullname(fullname)}} placeholder='Farmers Fullname' style={styles.textBoxes}></TextInput>

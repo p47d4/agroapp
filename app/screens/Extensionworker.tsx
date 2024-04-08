@@ -23,7 +23,7 @@ const Extensionworker = () => {
         // 
         // deleteDoc(doc(FIREBASE_DB, "farmers", "FARM"));
 
-        addDoc(collection (FIREBASE_DB, "farmers"), {
+        addDoc(collection (FIREBASE_DB, "extensionworker"), {
            fullname: fullname, 
            qualification: qualification, 
            yearsofxp: yearsofxp, 
@@ -49,7 +49,7 @@ const Extensionworker = () => {
 
 
       <Image style={styles.img} source={require('../../assets/e.png')} />
-      <Text style={styles.txt}>Extension Worker Details</Text>
+      <Text style={styles.txt}>Extension Worker</Text>
 
 
         <TextInput value={fullname} onChangeText={(fullname) => { setFullname(fullname)}} placeholder='Farmers Fullname' style={styles.textBoxes}></TextInput>

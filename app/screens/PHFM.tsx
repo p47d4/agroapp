@@ -25,7 +25,7 @@ const PHFM = () => {
         // 
         // deleteDoc(doc(FIREBASE_DB, "farmers", "FARM"));
 
-        addDoc(collection (FIREBASE_DB, "farmers"), {
+        addDoc(collection (FIREBASE_DB, "phfm"), {
            type: type, 
            name: name, 
            age: age, 
@@ -53,7 +53,7 @@ const PHFM = () => {
 
 
       <Image style={styles.img} source={require('../../assets/p.png')} />
-      <Text style={styles.txt}>Post Harvest Facility Manager Data</Text>
+      <Text style={styles.txt}>Post Harvest Facility</Text>
 
 
         <TextInput value={type} onChangeText={(type) => { setType(type)}} placeholder='Type of Facility' style={styles.textBoxes}></TextInput>

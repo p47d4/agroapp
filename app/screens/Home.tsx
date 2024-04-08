@@ -17,10 +17,10 @@ const Home = ({ navigation } : RouterProps) => {
         <Image style={styles.img} source={require('../../assets/image.png')} />
 
         {/* <Button title='Open details' onPress={() => navigation.navigate('details')} /> */}
-        <Button title='Open Farmer' onPress={() => navigation.navigate('farmers')} />
-        <Button title='Open Agrodealers' onPress={() => navigation.navigate('agrodealers')} />
-        <Button title='Open Post Harvest Facility Manager' onPress={() => navigation.navigate('phfm')} />
-        <Button title='Open Extension Worker' onPress={() => navigation.navigate('extensionworkers')} />
+        <Button title='Farmer' onPress={() => navigation.navigate('farmers')} />
+        <Button title='Agrodealers' onPress={() => navigation.navigate('agrodealers')} />
+        <Button title='Post Harvest Facility Manager' onPress={() => navigation.navigate('phfm')} />
+        <Button title='Extension Worker' onPress={() => navigation.navigate('extensionworkers')} />
         <Button title='Logout' onPress={() => FIREBASE_AUTH.signOut()} />
 
         {/* <Pressable style={styles.button}>
